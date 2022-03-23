@@ -1,0 +1,86 @@
+.grid_container {
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	grid-template-rows: auto auto auto; 
+}
+header{
+	grid-column: 1/3;
+}
+.tittle{
+	background-color: #add8e6;
+	text-align: center;
+	font-size: 2em;
+	text-transform: uppercase;
+	color: blue;
+	padding: 15px;
+}
+menu{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	background: khaki;
+	padding: 25px 30px;
+}
+menu li{
+	list-style: disc;
+}
+main{
+	grid-column: 2/3;
+	grid-row: 2/3;
+	padding: 20px;
+	background: url(../image/ball.png) repeat-y right top;
+}
+.menu_tittle {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+.menu_list {}
+.main_tittle {
+	font-weight: bold;
+	padding-bottom: 20px;
+	font-size: 1.5em;
+	text-align: center;
+}
+.main_text {}
+.main_text p:first-of-type{
+	margin-bottom: 10px;
+}
+.main_text img{
+	float: left;
+	padding-right: 15px;
+}
+footer{
+	grid-column: 1/3;
+	grid-row: 3/4;
+}
+@media (max-width: 425px){
+header, footer{
+	display: none;
+}
+.grid_container{
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto;
+}
+menu{
+	grid-column: 1/2;
+	grid-row: 2/3;
+	background: none;
+	width: 100vw;
+	order: 2;
+	padding: 0 15px;
+}
+main{
+	grid-column: 1/2;
+	grid-row: 1/2;
+	background: none;
+}
+.main_text img{
+	width: 100%;
+	padding: 0 0 15px 0;
+}
+menu li{
+	list-style: none;
+	display: inline-block;
+	margin-right: 5px;
+}
+}
+}
